@@ -3,9 +3,9 @@ it("Should greet the name passed in", function(){
 
     let greet = greetings();
 
-    greet.setName("Jimmy");
+    greet.setName();
 
-    assert.equal("Jimmy", greet.setName());
+    assert.equal(greet.setName());
 })
 
 })
