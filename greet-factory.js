@@ -1,30 +1,40 @@
-function greetings(){
+function Greetings(){
 
-    var nameRecord = 0;
+   var namesList = []; 
 
-
-    function checkEnglish(name, language){
-        if(language = "english"){
-            return "Hello" + name
+    function checkPedi(name, language){
+        language = "sepedi"
+            return "Thobela " + name;
         }
-    }
-    
-    function checkSepedi(name, language){
-        if(language = "sepedi"){
-            return "Thobela" + name
-        }
-    }
-    function checkIsixhosa(name, language){
-        if(language = "isixhosa"){
-            return "Molo" + name
-        }
-    }
-
-     return {
-        checkEnglish,
-        checkIsixhosa,
-        checkSepedi
-     }
+        function checkEnglish(name, language){
+        language = "english"
+            return "Hello " + name;
         
     }
+
+    function checkXhosa(name, language){ 
+     language = "isixhosa"
+            return "Molo " + name;
+        }
+
+    function setName(name){
+      namesList.push(name)
+      namesList.includes(name)
+    }
+
+    function nameCount(){
+        return namesList.length
+
+}
+       
+
+
    
+     return {
+        checkPedi,
+        checkEnglish,
+        checkXhosa,
+        setName,
+        nameCount
+     }
+    }     

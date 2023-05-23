@@ -12,6 +12,7 @@ body { background-color: rgb(114, 88, 70);
 
 
 button {
+    margin-top: 30px;
     background-color:antiquewhite;
     border-color: rgb(201, 156, 89);
     border-style: solid;
@@ -20,4 +21,8 @@ button {
     font-weight: bold;
     font-size: larger;
     cursor: pointer;
+}
+.languageRadio {
+    cursor:pointer ;
+
 }
