@@ -11,6 +11,12 @@ it("Should greet the name passed in sepedi", function(){
     assert.equal("Thobela Jimmy", greetInstance.checkPedi("Jimmy", "sepedi"));
 });
 
+it("Should greet the name passed in isixhosa", function(){
+    var greetInstance = Greetings();
+
+    assert.equal("Molo Jimmy", greetInstance.checkXhosa("Jimmy", "isixhosa"));
+});
+
 
 it("Should increment the counter each time you greet the user ", function(){
     let greetInstance = Greetings();
@@ -26,5 +32,23 @@ it("Should  not increment the counter if the name is passed in more than once ",
 
     assert.equal(1, greetInstance.nameCount());
 })
+
+it("Should return an error message for names with special charecters", function(){
+    var greetInstance = Greetings();
+
+    assert.equal("Enter a valid name", greetInstance.invalid("e537@", "english"));
+});
+
+it("Should return an error message if there is no name passed in", function(){
+    var greetInstance = Greetings();
+
+    assert.equal("Enter a valid name", greetInstance.invalid("", "english"));
+});
+
+it("Should return an error message if there is no language selected ", function(){
+    var greetInstance = Greetings();
+
+    assert.equal("Select a language", greetInstance.noLanguage(""));
+});
 
 })
