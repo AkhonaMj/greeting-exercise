@@ -16,42 +16,32 @@ function Greetings() {
     return "Molo " + name;
   }
 
-  function noLanguage(language){
-    if(language = ""){
-        return "Select a language"
+  function noLanguage(language) {
+    if ((language = "")) {
+      return "Select a language";
     }
   }
 
-
- 
   function valid(name) {
-    var rightName =/^[a-zA-Z]+$/
-    return rightName.test(name)
+    var rightName = /^[a-zA-Z]+$/;
+    return rightName.test(name);
   }
 
-  function invalid(name){
-    if(!valid(name)){
-        return "Enter a valid name"
+  function invalid(name) {
+    if (!valid(name)) {
+      return "Enter a valid name";
     }
   }
-
 
   function setName(name) {
-    namesList.push(name);
+    if (namesList.includes(name) === true) {
+    } else {
+      namesList.push(name);
+    }
   }
 
-
-  function nameCount(name) {
-
-    if (namesList[name] === undefined){
-        namesList.push(name);
-        counter++;
-        if(namesList[name] === true){
-            return "Name already counted"
-        }
-        return namesList.length;
-  }
-       
+  function nameCount() {
+    return namesList.length;
   }
 
   return {
@@ -59,11 +49,9 @@ function Greetings() {
     checkEnglish,
     checkXhosa,
     setName,
-    nameCount,
     valid,
     invalid,
     noLanguage,
-    nameCount
+    nameCount,
   };
 }
-    

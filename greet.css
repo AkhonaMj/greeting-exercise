@@ -1,4 +1,5 @@
 .textBox { 
+    margin-top: 30px;
     margin-left: 20px;
     font-size: 14px;
 
@@ -23,6 +24,7 @@ button {
     cursor: pointer;
 }
 .languageRadio {
+    margin-top: 30px;
     cursor:pointer ;
 
 }
