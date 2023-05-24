@@ -16,11 +16,10 @@ function Greetings() {
     return "Molo " + name;
   }
 
-  function noLanguage(language) {
-    if ((language = "")) {
-      return "Select a language";
+  function noLanguage(name,language) {
+      return "Enter a name and Select a language";
     }
-  }
+
 
   function valid(name) {
     var rightName = /^[a-zA-Z]+$/;
@@ -43,6 +42,8 @@ function Greetings() {
   function nameCount() {
     return namesList.length;
   }
+
+ 
 
   return {
     checkPedi,

@@ -45,10 +45,10 @@ it("Should return an error message if there is no name passed in", function(){
     assert.equal("Enter a valid name", greetInstance.invalid("", "english"));
 });
 
-it("Should return an error message if there is no language selected ", function(){
+it("Should return an error message if there is no name and language selected ", function(){
     var greetInstance = Greetings();
 
-    assert.equal("Select a language", greetInstance.noLanguage(""));
+    assert.equal("Enter a name and Select a language", greetInstance.noLanguage("", ""));
 });
 
 })
