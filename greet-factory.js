@@ -1,6 +1,6 @@
 function Greetings() {
   var namesList = [];
-  var counter = 0;
+  
 
   function checkPedi(name, language) {
     language = "sepedi";
